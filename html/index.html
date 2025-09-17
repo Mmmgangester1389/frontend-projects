@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رستوران ایتالیایی دلچسا</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>دلچسا</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#menu" class="nav-link">منو</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">گالری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">تماس</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>رستوران دلچسا</h1>
+                <p>تجربه‌ای بی‌نظیر از طعم‌های ایتالیایی اصل</p>
+                <button class="cta-button">رزرو میز</button>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <h2 class="section-title">منوی رستوران</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">همه</button>
+                <button class="category-btn" data-category="pizza">پیتزا</button>
+                <button class="category-btn" data-category="pasta">پاستا</button>
+                <button class="category-btn" data-category="salad">سالاد</button>
+                <button class="category-btn" data-category="dessert">دسر</button>
+            </div>
+            <div class="menu-items">
+                <!-- آیتم‌های منو توسط JavaScript پر می‌شوند -->
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <h2 class="section-title">درباره رستوران دلچسا</h2>
+                <p>رستوران دلچسا در سال ۱۳۹۰ با هدف ارائه غذاهای ایتالیایی اصل تأسیس شد. ما با استفاده از بهترین مواد اولیه و روش‌های سنتی ایتالیایی، طعم‌های بی‌نظیری را برای شما به ارمغان می‌آوریم.</p>
+                <p>فضای دنج و آرام رستوران، مکان مناسبی برای دورهمی‌های خانوادگی و دوستانه فراهم کرده است.</p>
+            </div>
+            <div class="about-image">
+                <div class="image-placeholder"></div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <h2 class="section-title">گالری تصاویر</h2>
+            <div class="gallery-container">
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+            </div>
+        </section>
+
+        <section id="comments" class="comments-section">
+            <h2 class="section-title">نظرات مشتریان</h2>
+            <div class="comments-container">
+                <!-- نظرات توسط JavaScript پر می‌شوند -->
+            </div>
+            <div class="comment-form">
+                <h3>نظر خود را ثبت کنید</h3>
+                <form id="add-comment-form">
+                    <input type="text" id="comment-name" placeholder="نام شما" required>
+                    <textarea id="comment-text" placeholder="نظر شما" required></textarea>
+                    <button type="submit">ارسال نظر</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">تماس با ما</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>اطلاعات تماس</h3>
+                    <p>آدرس: تهران، خیابان ولیعصر، کوچه بیست و پنجم، پلاک ۱۲</p>
+                    <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+                    <p>ساعات کاری: همه روزه از ۱۲ ظهر تا ۱۱ شب</p>
+                </div>
+                <div class="map-placeholder">
+                    <p>نقشه موقعیت رستوران</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© ۱۴۰۲ - کلیه حقوق برای رستوران دلچسا محفوظ است</p>
+            <div class="social-icons">
+                <span>اینستاگرام</span>
+                <span>تلگرام</span>
+                <span>توییتر</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/script.js"></script>
+</body>
+</html>

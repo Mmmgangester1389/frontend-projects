@@ -1,437 +1,0 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رستوران ایتالیایی دل‌پذیر</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- بارگذاری اسپینر -->
-    <div class="loading-spinner" id="loadingSpinner">
-        <div class="spinner"></div>
-    </div>
-
-    <!-- هدر سایت -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <span class="utensils-icon">🍴</span>
-                رستوران دل‌پذیر
-            </div>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <nav class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="#home" class="nav-link">خانه</a></li>
-                    <li><a href="#about" class="nav-link">درباره ما</a></li>
-                    <li><a href="#menu" class="nav-link">منو</a></li>
-                    <li><a href="#gallery" class="nav-link">گالری</a></li>
-                    <li><a href="#testimonials" class="nav-link">نظرات</a></li>
-                    <li><a href="#contact" class="nav-link">تماس با ما</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header-actions">
-                <button class="theme-toggle" id="themeToggle">🌙</button>
-                <button class="reservation-btn" id="reservationBtn">رزرو میز</button>
-            </div>
-        </div>
-    </header>
-
-    <!-- بخش اصلی هیرو -->
-    <section class="hero" id="home">
-        <div class="hero-slider">
-            <div class="slide active">
-                <div class="slide-content">
-                    <h1>رستوران ایتالیایی دل‌پذیر</h1>
-                    <p>لذیذترین غذاهای ایتالیایی را در محیطی دلنشین تجربه کنید</p>
-                    <div class="hero-buttons">
-                        <a href="#menu" class="btn primary-btn">مشاهده منو</a>
-                        <a href="#contact" class="btn secondary-btn">رزرو میز</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </section>
-
-    <!-- بخش درباره ما -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">درباره ما</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>رستوران دل‌پذیر در سال ۱۳۹۰ با هدف ارائه غذاهای ایتالیایی اصیل و با کیفیت تأسیس شد. ما با بهره‌گیری از بهترین آشپزهای بین‌المللی و استفاده از مواد اولیه تازه و مرغوب، تجربه‌ای بی‌نظیر از طعم‌های ایتالیایی را برای شما به ارمغان می‌آوریم.</p>
-                    <p>فضای دنج و آرامش‌بخش رستوران، مکان مناسبی برای دورهمی‌های خانوادگی، ملاقات‌های دوستانه و حتی جشن‌های کوچک است. ما همواره می‌کوشیم تا با ارائه خدمات ممتاز، خاطره‌ای خوش از طعم غذاهایمان در ذهن شما به جای بگذاریم.</p>
-                    
-                    <div class="features">
-                        <div class="feature">
-                            <div class="feature-icon">🌱</div>
-                            <h4>مواد اولیه تازه</h4>
-                            <p>استفاده از بهترین و تازه‌ترین مواد اولیه</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">👨‍🍳</div>
-                            <h4>آشپزهای حرفه‌ای</h4>
-                            <p>آشپزهای بین‌المللی با سال‌ها تجربه</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">🌍</div>
-                            <h4>طعم‌های اصیل</h4>
-                            <p>غذاهای ایتالیایی اصیل و خوشمزه</p>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="btn primary-btn">رزرو میز</a>
-                </div>
-                <div class="about-image">
-                    <div class="image-frame">
-                        <div class="restaurant-image"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- بخش منو -->
-    <section id="menu" class="menu">
-        <div class="container">
-            <h2 class="section-title">منوی غذایی</h2>
-            
-            <div class="menu-filters">
-                <button class="filter-btn active" data-category="all">همه</button>
-                <button class="filter-btn" data-category="main">غذای اصلی</button>
-                <button class="filter-btn" data-category="appetizer">پیش غذا</button>
-                <button class="filter-btn" data-category="dessert">دسر</button>
-                <button class="filter-btn" data-category="drink">نوشیدنی</button>
-            </div>
-            
-            <div class="menu-items">
-                <div class="menu-item" data-category="main">
-                    <div class="item-image pasta-image"></div>
-                    <div class="menu-item-content">
-                        <h3>پاستا Carbonara</h3>
-                        <p>پاستا با سس خامه‌ای، پنیر پارمزان و تکه‌های گوشت</p>
-                        <div class="item-footer">
-                            <div class="price">۱۵۰,۰۰۰ تومان</div>
-                            <button class="add-to-cart">+ افزودن</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="menu-item" data-category="main">
-                    <div class="item-image pizza-image"></div>
-                    <div class="menu-item-content">
-                        <h3>پیتزا مارجاریتا</h3>
-                        <p>پیتزا با پنیر موزارلا، گوجه فرنگی تازه و ریحان</p>
-                        <div class="item-footer">
-                            <div class="price">۱۲۰,۰۰۰ تومان</div>
-                            <button class="add-to-cart">+ افزودن</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="menu-item" data-category="main">
-                    <div class="item-image risotto-image"></div>
-                    <div class="menu-item-content">
-                        <h3>ریزوتو قارچ</h3>
-                        <p>برنج ایتالیایی با قارچ و پنیر پارمزان</p>
-                        <div class="item-footer">
-                            <div class="price">۱۳۰,۰۰۰ تومان</div>
-                            <button class="add-to-cart">+ افزودن</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="menu-item" data-category="appetizer">
-                    <div class="item-image salad-image"></div>
-                    <div class="menu-item-content">
-                        <h3>سالاد ایتالیایی</h3>
-                        <p>سالاد تازه با سس مخصوص ایتالیایی</p>
-                        <div class="item-footer">
-                            <div class="price">۷۵,۰۰۰ تومان</div>
-                            <button class="add-to-cart">+ افزودن</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="menu-item" data-category="dessert">
-                    <div class="item-image tiramisu-image"></div>
-                    <div class="menu-item-content">
-                        <h3>تیرامیسو</h3>
-                        <p>دسر ایتالیایی خوشمزه با قهوه و mascarpone</p>
-                        <div class="item-footer">
-                            <div class="price">۹۰,۰۰۰ تومان</div>
-                            <button class="add-to-cart">+ افزودن</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="menu-item" data-category="drink">
-                    <div class="item-image drink-image"></div>
-                    <div class="menu-item-content">
-                        <h3>نوشیدنی مخصوص</h3>
-                        <p>نوشیدنی خنک با طعم لیمو و نعنا</p>
-                        <div class="item-footer">
-                            <div class="price">۵۰,۰۰۰ تومان</div>
-                            <button class="add-to-cart">+ افزودن</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- بخش گالری -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="section-title">گالری تصاویر</h2>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-image food-1"></div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image food-2"></div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image food-3"></div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image interior-1"></div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image interior-2"></div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image interior-3"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- بخش نظرات -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">نظرات مشتریان</h2>
-            
-            <div class="testimonial-slider">
-                <div class="testimonial-item active">
-                    <div class="testimonial-content">
-                        <div class="rating">★★★★★</div>
-                        <p>"بهترین پاستایی که تا به حال خوردم! فضای رستوران بسیار دنج و پرسنل خوش برخورد هستند. حتما دوباره خواهم آمد."</p>
-                        <div class="customer">
-                            <div class="customer-avatar customer-1"></div>
-                            <div class="customer-info">
-                                <h4>نگار محمدی</h4>
-                                <span>مشتری ثابت</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="rating">★★★★☆</div>
-                        <p>"برای جشن تولد پسرم اینجا را انتخاب کردم و واقعاً پشیمان نشدم. غذاها عالی و سرویس دهی بی‌نظیر بود. فقط فضای رستوران کمی کوچک است."</p>
-                        <div class="customer">
-                            <div class="customer-avatar customer-2"></div>
-                            <div class="customer-info">
-                                <h4>علی رضایی</h4>
-                                <span>مهمان ویژه</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="rating">★★★★★</div>
-                        <p>"هر هفته با دوستانم به این رستوران می‌آیم. کیفیت غذاها همیشه ثابت و عالی است. پیشنهاد می‌کنم حتما پیتزاهایشان را امتحان کنید."</p>
-                        <div class="customer">
-                            <div class="customer-avatar customer-3"></div>
-                            <div class="customer-info">
-                                <h4>سارا حسینی</h4>
-                                <span>طرفدار پروپاقرص</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-controls">
-                    <button class="control-btn prev-btn">❮</button>
-                    <button class="control-btn next-btn">❯</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- بخش تماس با ما -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">تماس با ما</h2>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-details">
-                            <h3>آدرس</h3>
-                            <p>تهران، خیابان ولیعصر، کوچه فلان، پلاک ۱۲۳</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-icon">📞</div>
-                        <div class="contact-details">
-                            <h3>تلفن</h3>
-                            <p>۰۲۱-۱۲۳۴۵۶۷۸</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-icon">✉️</div>
-                        <div class="contact-details">
-                            <h3>ایمیل</h3>
-                            <p>info@delpazir-restaurant.ir</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-icon">🕒</div>
-                        <div class="contact-details">
-                            <h3>ساعات کاری</h3>
-                            <p>هر روز از ۱۱:۰۰ تا ۲۳:۰۰</p>
-                        </div>
-                    </div>
-                    
-                    <div class="map-container">
-                        <div class="map-placeholder">
-                            <span>📍 نقشه موقعیت رستوران</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>فرم تماس با ما</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="نام شما" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="ایمیل شما" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="tel" id="phone" placeholder="شماره تماس">
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="text" id="subject" placeholder="موضوع">
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea id="message" placeholder="پیام شما" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn primary-btn">ارسال پیام</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- پاورقی -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>رستوران دل‌پذیر</h3>
-                    <p>ما با ارائه غذاهای ایتالیایی اصیل و باکیفیت، تجربه‌ای بی‌نظیر از طعم‌های ایتالیایی را برای شما به ارمغان می‌آوریم.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">📱</a>
-                        <a href="#" class="social-link">📷</a>
-                        <a href="#" class="social-link">💬</a>
-                        <a href="#" class="social-link">🌐</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>لینک‌های سریع</h3>
-                    <ul>
-                        <li><a href="#home">خانه</a></li>
-                        <li><a href="#about">درباره ما</a></li>
-                        <li><a href="#menu">منو</a></li>
-                        <li><a href="#gallery">گالری</a></li>
-                        <li><a href="#contact">تماس با ما</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>ساعات کاری</h3>
-                    <ul>
-                        <li>شنبه تا چهارشنبه: ۱۱:۰۰ - ۲۳:۰۰</li>
-                        <li>پنجشنبه و جمعه: ۱۲:۰۰ - ۲۴:۰۰</li>
-                        <li>ایام تعطیل: ۱۶:۰۰ - ۲۴:۰۰</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>خبرنامه</h3>
-                    <p>برای دریافت جدیدترین تخفیف‌ها و منوهای ویژه در خبرنامه ما عضو شوید</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="ایمیل خود را وارد کنید" required>
-                        <button type="submit">عضویت</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>© ۱۴۰۲ کلیه حقوق برای رستوران دل‌پذیر محفوظ است.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- دکمه بازگشت به بالا -->
-    <button class="scroll-to-top" id="scrollToTop">↑</button>
-
-    <!-- مودال رزرو میز -->
-    <div class="modal" id="reservationModal">
-        <div class="modal-content">
-            <span class="close-modal" id="closeModal">×</span>
-            <h2>رزرو میز</h2>
-            <form id="reservationForm">
-                <div class="form-group">
-                    <input type="text" placeholder="نام و نام خانوادگی" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="شماره تماس" required>
-                </div>
-                <div class="form-group">
-                    <input type="number" placeholder="تعداد نفرات" min="1" required>
-                </div>
-                <div class="form-group">
-                    <input type="date" required>
-                </div>
-                <div class="form-group">
-                    <input type="time" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="توضیحات اضافی (اختیاری)" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn primary-btn">تأیید رزرو</button>
-            </form>
-        </div>
-    </div>
-</body>
-</html>
