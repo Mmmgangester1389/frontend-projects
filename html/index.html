@@ -1,132 +1,182 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رستوران ایتالیایی دلچسا</title>
+    <title>فودیکو - لیست رستوران‌ها</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+    <!-- هدر -->
     <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <h2>دلچسا</h2>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">خانه</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#menu" class="nav-link">منو</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">درباره ما</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#gallery" class="nav-link">گالری</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">تماس</a>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+        <div class="header-container">
+            <div class="logo">
+                <h1>فودیکو</h1>
+                <p>سفارش آنلاین غذا</p>
             </div>
-        </nav>
+            <div class="search-bar">
+                <input type="text" id="restaurant-search" placeholder="جستجوی رستوران...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="user-actions">
+                <button class="btn-secondary">
+                    <i class="fas user-icon"></i>
+                    ورود / ثبت‌نام
+                </button>
+            </div>
+        </div>
     </header>
 
+    <!-- بخش اصلی -->
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>رستوران دلچسا</h1>
-                <p>تجربه‌ای بی‌نظیر از طعم‌های ایتالیایی اصل</p>
-                <button class="cta-button">رزرو میز</button>
-            </div>
-        </section>
+        <!-- فیلترها -->
+        <section class="filters-section">
+            <div class="container">
+                <h2>فیلترها</h2>
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <h3>نوع رستوران</h3>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="iranian">
+                                <span>ایرانی</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="fastfood">
+                                <span>فست فود</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="italian">
+                                <span>ایتالیایی</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="traditional">
+                                <span>سنتی</span>
+                            </label>
+                        </div>
+                    </div>
 
-        <section id="menu" class="menu-section">
-            <h2 class="section-title">منوی رستوران</h2>
-            <div class="menu-categories">
-                <button class="category-btn active" data-category="all">همه</button>
-                <button class="category-btn" data-category="pizza">پیتزا</button>
-                <button class="category-btn" data-category="pasta">پاستا</button>
-                <button class="category-btn" data-category="salad">سالاد</button>
-                <button class="category-btn" data-category="dessert">دسر</button>
-            </div>
-            <div class="menu-items">
-                <!-- آیتم‌های منو توسط JavaScript پر می‌شوند -->
-            </div>
-        </section>
+                    <div class="filter-group">
+                        <h3>امکانات</h3>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="delivery">
+                                <span>ارسال رایگان</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="discount">
+                                <span>تخفیف ویژه</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="vegetarian">
+                                <span>غذای گیاهی</span>
+                            </label>
+                        </div>
+                    </div>
 
-        <section id="about" class="about-section">
-            <div class="about-content">
-                <h2 class="section-title">درباره رستوران دلچسا</h2>
-                <p>رستوران دلچسا در سال ۱۳۹۰ با هدف ارائه غذاهای ایتالیایی اصل تأسیس شد. ما با استفاده از بهترین مواد اولیه و روش‌های سنتی ایتالیایی، طعم‌های بی‌نظیری را برای شما به ارمغان می‌آوریم.</p>
-                <p>فضای دنج و آرام رستوران، مکان مناسبی برای دورهمی‌های خانوادگی و دوستانه فراهم کرده است.</p>
-            </div>
-            <div class="about-image">
-                <div class="image-placeholder"></div>
-            </div>
-        </section>
+                    <div class="filter-group">
+                        <h3>بازه قیمت</h3>
+                        <div class="price-range">
+                            <input type="range" min="0" max="100000" value="50000" class="slider" id="price-range">
+                            <div class="price-labels">
+                                <span>اقتصادی</span>
+                                <span id="price-value">50,000 تومان</span>
+                                <span>گران</span>
+                            </div>
+                        </div>
+                    </div>
 
-        <section id="gallery" class="gallery-section">
-            <h2 class="section-title">گالری تصاویر</h2>
-            <div class="gallery-container">
-                <div class="gallery-item"></div>
-                <div class="gallery-item"></div>
-                <div class="gallery-item"></div>
-                <div class="gallery-item"></div>
-                <div class="gallery-item"></div>
-                <div class="gallery-item"></div>
-            </div>
-        </section>
-
-        <section id="comments" class="comments-section">
-            <h2 class="section-title">نظرات مشتریان</h2>
-            <div class="comments-container">
-                <!-- نظرات توسط JavaScript پر می‌شوند -->
-            </div>
-            <div class="comment-form">
-                <h3>نظر خود را ثبت کنید</h3>
-                <form id="add-comment-form">
-                    <input type="text" id="comment-name" placeholder="نام شما" required>
-                    <textarea id="comment-text" placeholder="نظر شما" required></textarea>
-                    <button type="submit">ارسال نظر</button>
-                </form>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <h2 class="section-title">تماس با ما</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>اطلاعات تماس</h3>
-                    <p>آدرس: تهران، خیابان ولیعصر، کوچه بیست و پنجم، پلاک ۱۲</p>
-                    <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
-                    <p>ساعات کاری: همه روزه از ۱۲ ظهر تا ۱۱ شب</p>
+                    <div class="filter-group">
+                        <h3>مرتب‌سازی بر اساس</h3>
+                        <select id="sort-by">
+                            <option value="popularity">محبوبیت</option>
+                            <option value="rating">بالاترین امتیاز</option>
+                            <option value="delivery-time">سریع‌ترین ارسال</option>
+                            <option value="price-low">ارزان‌ترین</option>
+                            <option value="price-high">گران‌ترین</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="map-placeholder">
-                    <p>نقشه موقعیت رستوران</p>
+            </div>
+        </section>
+
+        <!-- لیست رستوران‌ها -->
+        <section class="restaurants-section">
+            <div class="container">
+                <h2>رستوران‌ها</h2>
+                <div class="restaurants-list" id="restaurants-list">
+                    <!-- رستوران‌ها توسط JavaScript پر می‌شوند -->
+                </div>
+            </div>
+        </section>
+
+        <!-- منوی رستوران (مخفی شده تا زمانی که رستورانی انتخاب شود) -->
+        <section class="menu-section hidden" id="menu-section">
+            <div class="container">
+                <div class="menu-header">
+                    <button class="back-btn" id="back-to-restaurants">
+                        <i class="fas fa-arrow-right"></i>
+                        بازگشت به لیست رستوران‌ها
+                    </button>
+                    <h2 id="restaurant-name">منوی رستوران</h2>
+                    <div class="restaurant-info">
+                        <span class="rating">4.5</span>
+                        <span class="delivery-time">45 دقیقه</span>
+                        <span class="delivery-price">هزینه ارسال: 15,000 تومان</span>
+                    </div>
+                </div>
+
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="all">همه</button>
+                    <button class="category-btn" data-category="appetizer">پیش غذا</button>
+                    <button class="category-btn" data-category="main">غذای اصلی</button>
+                    <button class="category-btn" data-category="dessert">دسر</button>
+                    <button class="category-btn" data-category="drink">نوشیدنی</button>
+                </div>
+
+                <div class="menu-items" id="menu-items">
+                    <!-- آیتم‌های منو توسط JavaScript پر می‌شوند -->
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- فوتر -->
     <footer>
-        <div class="footer-content">
-            <p>© ۱۴۰۲ - کلیه حقوق برای رستوران دلچسا محفوظ است</p>
-            <div class="social-icons">
-                <span>اینستاگرام</span>
-                <span>تلگرام</span>
-                <span>توییتر</span>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>فودیکو</h3>
+                    <p>سفارش آنلاین غذا از بهترین رستوران‌های شهر</p>
+                </div>
+                <div class="footer-section">
+                    <h4>دسترسی سریع</h4>
+                    <ul>
+                        <li><a href="#">رستوران‌ها</a></li>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>پشتیبانی</h4>
+                    <ul>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">قوانین و مقررات</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© ۱۴۰۲ - کلیه حقوق برای فودیکو محفوظ است</p>
             </div>
         </div>
     </footer>
 
     <script src="../script/script.js"></script>
 </body>
+
 </html>
