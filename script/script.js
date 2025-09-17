@@ -1,122 +1,23 @@
-// داده‌های نمونه رستوران‌ها
-const restaurants = [
-    {
-        id: 1,
-        name: "رستوران ایرانی نگین",
-        description: "غذاهای اصیل ایرانی در محیطی سنتی",
-        image: "🍛",
-        rating: 4.7,
-        deliveryTime: "35 دقیقه",
-        type: ["iranian", "traditional"],
-        features: ["delivery", "discount"],
-        averagePrice: 45000
-    },
-    {
-        id: 2,
-        name: "پیتزای ایتالیایی",
-        description: "پیتزاهای ایتالیایی اصل با خمیر مخصوص",
-        image: "🍕",
-        rating: 4.5,
-        deliveryTime: "45 دقیقه",
-        type: ["italian", "fastfood"],
-        features: ["delivery"],
-        averagePrice: 65000
-    },
-    {
-        id: 3,
-        name: "برگر هاوس",
-        description: "برگرهای خوشمزه با گوشت کبابی",
-        image: "🍔",
-        rating: 4.3,
-        deliveryTime: "25 دقیقه",
-        type: ["fastfood"],
-        features: ["vegetarian", "discount"],
-        averagePrice: 55000
-    },
-    {
-        id: 4,
-        name: "رستوران سنتی قصر",
-        description: "غذاهای محلی و سنتی در محیطی لوکس",
-        image: "🏯",
-        rating: 4.8,
-        deliveryTime: "50 دقیقه",
-        type: ["iranian", "traditional"],
-        features: ["discount"],
-        averagePrice: 75000
-    },
-    {
-        id: 5,
-        name: "سوشی بار",
-        description: "غذاهای ژاپنی تازه و سالم",
-        image: "🍣",
-        rating: 4.6,
-        deliveryTime: "40 دقیقه",
-        type: [],
-        features: ["vegetarian"],
-        averagePrice: 85000
-    },
-    {
-        id: 6,
-        name: "کافه رستوران مدرن",
-        description: "فضای دنج و غذاهای بین المللی",
-        image: "☕",
-        rating: 4.4,
-        deliveryTime: "30 دقیقه",
-        type: ["fastfood"],
-        features: ["delivery", "vegetarian"],
-        averagePrice: 50000
-    }
-];
-
-// داده‌های منو برای هر رستوران
-const menus = {
-    1: [
-        { id: 101, name: "قورمه سبزی", price: 55000, category: "main", description: "با گوشت گوسفندی و لوبیا قرمز", image: "🍲" },
-        { id: 102, name: "چلوکباب کوبیده", price: 68000, category: "main", description: "با برنج ایرانی و کباب کوبیده", image: "🍖" },
-        { id: 103, name: "میرزا قاسمی", price: 35000, category: "appetizer", description: "با بادمجان کبابی و گوجه", image: "🍆" },
-        { id: 104, name: "دوغ محلی", price: 15000, category: "drink", description: "دوغ سنتی با نعنا", image: "🥛" },
-        { id: 105, name: "بستنی سنتی", price: 25000, category: "dessert", description: "با زعفران و پسته", image: "🍨" }
-    ],
-    2: [
-        { id: 201, name: "پیتزا مارگاریتا", price: 75000, category: "main", description: "پنیر موزارلا، سس گوجه فرنگی، ریحان", image: "🍕" },
-        { id: 202, name: "پیتزا پپرونی", price: 85000, category: "main", description: "پپرونی، پنیر موزارلا، سس گوجه", image: "🍕" },
-        { id: 203, name: "پاستا Carbonara", price: 65000, category: "main", description: "خامه، پنیر پارمزان، تخم مرغ", image: "🍝" },
-        { id: 204, name: "سیر رول", price: 30000, category: "appetizer", description: "سیر و پنیر در خمیر", image: "🧄" },
-        { id: 205, name: "تیラمیسو", price: 35000, category: "dessert", description: "دسر ایتالیایی با قهوه و ماسکارپونه", image: "🍰" }
-    ],
-    3: [
-        { id: 301, name: "برگر کلاسیک", price: 55000, category: "main", description: "گوشت گاو، پنیر، کاهو، گوجه", image: "🍔" },
-        { id: 302, name: "برگر مخصوص", price: 75000, category: "main", description: "دو طبقه گوشت، پنیر چدار، قارچ", image: "🍔" },
-        { id: 303, name: "برگر گیاهی", price: 45000, category: "main", description: "سویا، قارچ، سبزیجات تازه", image: "🍔" },
-        { id: 304, name: "سیب زمینی سرخ کرده", price: 25000, category: "appetizer", description: "با سس مخصوص", image: "🍟" },
-        { id: 305, name: "نوشابه", price: 15000, category: "drink", description: "کوکا کولا، Sprite، Fanta", image: "🥤" }
-    ],
-    4: [
-        { id: 401, name: "دیزی سنتی", price: 45000, category: "main", description: "با نان سنگک و ترشی", image: "🍲" },
-        { id: 402, name: "آبگوشت بزباش", price: 55000, category: "main", description: "با گوشت بره و حبوبات", image: "🍖" },
-        { id: 403, name: "کله پاچه", price: 85000, category: "main", description: "سحرانه با نان تازه", image: "🥘" },
-        { id: 404, name: "ترشی محلی", price: 15000, category: "appetizer", description: "مخلوط سبزیجات خانگی", image: "🥗" },
-        { id: 405, name: "چای سنتی", price: 10000, category: "drink", description: "در قوری مسی با نبات", image: "🍵" }
-    ],
-    5: [
-        { id: 501, name: "سوشی California", price: 85000, category: "main", description: "خرچنگ، خیار، آووکادو", image: "🍣" },
-        { id: 502, name: "ساشیمی سالمون", price: 95000, category: "main", description: "ماهی سالمون تازه", image: "🐟" },
-        { id: 503, name: "رامن", price: 45000, category: "main", description: "نودل ژاپنی با سبزیجات", image: "🍜" },
-        { id: 504, name: "سوپ میسو", price: 25000, category: "appetizer", description: "سوپ سنتی ژاپنی", image: "🍲" },
-        { id: 505, name: "چای سبز", price: 15000, category: "drink", description: "چای سبز ژاپنی", image: "🍵" }
-    ],
-    6: [
-        { id: 601, name: "استیک گریل", price: 95000, category: "main", description: "گوشت راسته با سس قارچ", image: "🥩" },
-        { id: 602, name: "سالاد سزار", price: 45000, category: "main", description: "کاهو، سس سزار، پنیر پارمزان", image: "🥗" },
-        { id: 603, name: "سوپ قارچ", price: 35000, category: "appetizer", description: "سوپ خامه ای قارچ", image: "🍲" },
-        { id: 604, name: "پنکیک", price: 40000, category: "dessert", description: "با عسل و بستنی", image: "🥞" },
-        { id: 605, name: "لاته", price: 30000, category: "drink", description: "اسپرسو با شیر بخارپز", image: "☕" }
-    ]
-};
-
-// متغیرهای全局
+// متغیرهای جهانی
 let currentRestaurantId = null;
 let currentMenuCategory = 'all';
+let restaurants = [];
+let cart = [];
+
+// بارگذاری داده‌ها از فایل JSON
+async function loadRestaurantsData() {
+    try {
+        const response = await fetch('../data.json');
+        const data = await response.json();
+        restaurants = data.restaurants;
+        displayRestaurants();
+        setupEventListeners();
+    } catch (error) {
+        console.error('خطا در بارگذاری داده‌ها:', error);
+        document.getElementById('restaurants-list').innerHTML = 
+            '<p class="error-message">خطا در بارگذاری داده‌ها. لطفا صفحه را مجددا بارگذاری کنید.</p>';
+    }
+}
 
 // نمایش رستوران‌ها
 function displayRestaurants(restaurantsToShow = restaurants) {
@@ -143,6 +44,11 @@ function displayRestaurants(restaurantsToShow = restaurants) {
                     <span class="delivery-time">${restaurant.deliveryTime}</span>
                     <span class="average-price">${restaurant.averagePrice.toLocaleString()} تومان</span>
                 </div>
+                <div class="restaurant-features">
+                    ${restaurant.features.includes('delivery') ? '<span class="feature delivery">ارسال</span>' : ''}
+                    ${restaurant.features.includes('discount') ? '<span class="feature discount">تخفیف</span>' : ''}
+                    ${restaurant.features.includes('vegetarian') ? '<span class="feature vegetarian">گیاهی</span>' : ''}
+                </div>
             </div>
         `;
 
@@ -160,9 +66,9 @@ function showRestaurantMenu(restaurantId) {
 
     // به روز رسانی اطلاعات رستوران در بخش منو
     document.getElementById('restaurant-name').textContent = restaurant.name;
-    document.querySelector('.rating').textContent = `⭐ ${restaurant.rating}`;
-    document.querySelector('.delivery-time').textContent = `${restaurant.deliveryTime}`;
-    document.querySelector('.delivery-price').textContent = `هزینه ارسال: ${(restaurant.averagePrice / 3).toLocaleString()} تومان`;
+    document.getElementById('menu-rating').textContent = `⭐ ${restaurant.rating}`;
+    document.getElementById('menu-delivery-time').textContent = `${restaurant.deliveryTime}`;
+    document.getElementById('delivery-price').textContent = `هزینه ارسال: ${Math.round(restaurant.averagePrice / 3).toLocaleString()} تومان`;
 
     // نمایش منو و مخفی کردن لیست رستوران‌ها
     document.querySelector('.restaurants-section').classList.add('hidden');
@@ -180,16 +86,22 @@ function displayMenuItems() {
     const menuItemsContainer = document.getElementById('menu-items');
     menuItemsContainer.innerHTML = '';
 
-    const restaurantMenu = menus[currentRestaurantId];
-    if (!restaurantMenu) return;
+    const restaurant = restaurants.find(r => r.id === currentRestaurantId);
+    if (!restaurant || !restaurant.menu) return;
 
     const filteredItems = currentMenuCategory === 'all'
-        ? restaurantMenu
-        : restaurantMenu.filter(item => item.category === currentMenuCategory);
+        ? restaurant.menu
+        : restaurant.menu.filter(item => item.category === currentMenuCategory);
+
+    if (filteredItems.length === 0) {
+        menuItemsContainer.innerHTML = '<p class="no-result">هیچ آیتمی در این دسته‌بندی وجود ندارد</p>';
+        return;
+    }
 
     filteredItems.forEach(item => {
         const menuItemElement = document.createElement('div');
         menuItemElement.className = 'menu-item';
+        menuItemElement.dataset.id = item.id;
 
         menuItemElement.innerHTML = `
             <div class="item-image">${item.image}</div>
@@ -199,12 +111,62 @@ function displayMenuItems() {
                     <span class="price">${item.price.toLocaleString()} تومان</span>
                 </div>
                 <p class="description">${item.description}</p>
-                <button class="add-to-cart">افزودن به سبد خرید</button>
+                <button class="add-to-cart" onclick="addToCart(${item.id}, ${item.price}, '${item.name.replace(/'/g, "\\'")}')">افزودن به سبد خرید</button>
             </div>
         `;
 
         menuItemsContainer.appendChild(menuItemElement);
     });
+}
+
+// افزودن به سبد خرید
+function addToCart(itemId, price, name) {
+    const existingItem = cart.find(item => item.id === itemId);
+    
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            id: itemId,
+            name: name,
+            price: price,
+            quantity: 1
+        });
+    }
+    
+    updateCartBadge();
+    showNotification(`"${name}" به سبد خرید اضافه شد`);
+}
+
+// به روزرسانی نشان سبد خرید
+function updateCartBadge() {
+    const cartBadge = document.getElementById('cart-badge');
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    
+    if (totalItems > 0) {
+        cartBadge.textContent = totalItems;
+        cartBadge.style.display = 'block';
+    } else {
+        cartBadge.style.display = 'none';
+    }
+}
+
+// نمایش نوتیفیکیشن
+function showNotification(message) {
+    // ایجاد عنصر نوتیفیکیشن اگر وجود ندارد
+    let notification = document.getElementById('notification');
+    if (!notification) {
+        notification = document.createElement('div');
+        notification.id = 'notification';
+        document.body.appendChild(notification);
+    }
+    
+    notification.textContent = message;
+    notification.classList.add('show');
+    
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 3000);
 }
 
 // بازگشت به لیست رستوران‌ها
@@ -217,7 +179,10 @@ function backToRestaurants() {
 
 // فیلتر کردن رستوران‌ها
 function filterRestaurants() {
-    const selectedTypes = Array.from(document.querySelectorAll('input[type="checkbox"][value]:checked'))
+    const selectedTypes = Array.from(document.querySelectorAll('input[type="checkbox"][name="type"]:checked'))
+        .map(checkbox => checkbox.value);
+
+    const selectedFeatures = Array.from(document.querySelectorAll('input[type="checkbox"][name="feature"]:checked'))
         .map(checkbox => checkbox.value);
 
     const priceRange = document.getElementById('price-range').value;
@@ -229,6 +194,12 @@ function filterRestaurants() {
         if (selectedTypes.length > 0) {
             const hasSelectedType = selectedTypes.some(type => restaurant.type.includes(type));
             if (!hasSelectedType) return false;
+        }
+
+        // فیلتر بر اساس ویژگی‌ها
+        if (selectedFeatures.length > 0) {
+            const hasSelectedFeature = selectedFeatures.every(feature => restaurant.features.includes(feature));
+            if (!hasSelectedFeature) return false;
         }
 
         // فیلتر بر اساس قیمت
@@ -265,11 +236,8 @@ function filterRestaurants() {
     displayRestaurants(filteredRestaurants);
 }
 
-// راه‌اندازی اولیه
-document.addEventListener('DOMContentLoaded', function () {
-    // نمایش رستوران‌ها
-    displayRestaurants();
-
+// تنظیم event listeners
+function setupEventListeners() {
     // رویداد بازگشت به لیست رستوران‌ها
     document.getElementById('back-to-restaurants').addEventListener('click', backToRestaurants);
 
@@ -297,6 +265,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('restaurant-search').addEventListener('input', filterRestaurants);
 
+    // دکمه مشاهده سبد خرید
+    document.getElementById('view-cart').addEventListener('click', showCart);
+}
+
+// نمایش سبد خرید
+function showCart() {
+    if (cart.length === 0) {
+        showNotification('سبد خرید شما خالی است');
+        return;
+    }
+    
+    // اینجا می‌توانید منطق نمایش سبد خرید را پیاده‌سازی کنید
+    console.log('سبد خرید:', cart);
+    alert('سبد خرید:\n' + cart.map(item => 
+        `${item.name} - ${item.quantity} عدد - ${(item.price * item.quantity).toLocaleString()} تومان`
+    ).join('\n'));
+}
+
+// راه‌اندازی اولیه
+document.addEventListener('DOMContentLoaded', function () {
+    // بارگذاری داده‌ها
+    loadRestaurantsData();
+
     // مقدار اولیه برای نمایش محدوده قیمت
-    document.getElementById('price-value').textContent = `${parseInt(document.getElementById('price-range').value).toLocaleString()} تومان`;
+    const priceRange = document.getElementById('price-range');
+    if (priceRange) {
+        document.getElementById('price-value').textContent = `${parseInt(priceRange.value).toLocaleString()} تومان`;
+    }
 });
