@@ -1,2 +1,21 @@
-# frontend-projects
-A collection of my best website design and frontend development projects.
+# Frontend Projects Portfolio
+
+خوش آمدید به مجموعه نمونه کارهای فرانت‌اند من!  
+این ریپازیتوری شامل پروژه‌هایی است که مهارت‌های من در طراحی و توسعه وب را نشان می‌دهد.
+
+## 🚀 پروژه‌
+
+### ۱. رستوران
+- **توضیح:** یک وبسایت [ویژگی اصلی]
+- **تکنولوژی‌ها:** HTML, CSS, JavaScript, [بقیۀ تکنولوژی‌ها]
+- [لینک دمو (اگر hosted کردی)] | [لینک مستقیم به پوشه پروژه]
+## 🛠 مهارت‌ها
+- HTML5, CSS3, JavaScript (ES6+)
+- Responsive Design
+- React.js / Vue.js (اگر بلدی)
+- Git & GitHub
+
+## 📞 تماس با من
+- ایمیل: your-email@example.com
+- لینکدین: [لینک پروفایل لینکدینت]
+- پورتفولیو: [لینک وبسایت شخصی اگر داری]
