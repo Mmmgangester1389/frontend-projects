@@ -20,15 +20,18 @@ body {
 
 /* هدر */
 header {
-    background: linear-gradient(to right, #8B0000, #A52A2A);
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    backdrop-filter:blur(10px);
 }
 
 .header-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,16 +59,12 @@ header {
     flex-grow: 1;
     padding: 0.8rem 1rem;
     border: none;
-    border-radius: 5px 0 0 5px;
+    border-radius: 15px;
     font-size: 1rem;
-}
-
-.search-btn {
-    background: #FFD700;
-    border: none;
-    padding: 0 1.2rem;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 .user-actions .btn-secondary {
@@ -86,17 +85,17 @@ header {
 /* بخش اصلی */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 0 1.5rem;
 }
 
 /* فیلترها */
 .filters-section {
     background: white;
-    padding: 2rem 0;
-    margin: 1rem 0;
+    padding: 8rem 0 1rem 0;
+    margin: 2rem 15rem;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 40px rgba(0, 0, 0, 0.2);
 }
 
 .filters-section h2 {
@@ -191,7 +190,7 @@ header {
 
 .restaurant-image {
     height: 180px;
-    background: linear-gradient(45deg, #8B0000, #A52A2A);
+    background: linear-gradient(45deg, #ebebeb, #646464);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -330,7 +329,7 @@ header {
 }
 
 .price {
-    color: #8B0000;
+    color: #ff0000;
     font-weight: bold;
 }
 
